@@ -1,4 +1,4 @@
-# How to write API
+# How to create API
 
 In this tutorial, we will guide you through creating an API using a predefined template structure, covering everything from setting up the initial package.json file to the final architecture of the code.
 
