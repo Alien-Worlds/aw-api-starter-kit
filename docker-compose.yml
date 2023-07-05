@@ -1,0 +1,33 @@
+version: '3.7'
+services:
+  api:
+    build:
+      context: .
+      args:
+        - GITHUB_TOKEN=${GITHUB_TOKEN}
+    restart: on-failure
+    command: [ 'sh', '-c', 'yarn start' ]
+    depends_on:
+      - db
+    networks:
+      - common_network
+    volumes:
+      - ./:/var/
+  db:
+    image: mongo
+    restart: always
+    ports:
+      - '27017:27017'
+    expose:
+      - 27017
+    networks:
+      - common_network
+    volumes:
+      - database:/data/db
+
+volumes:
+  database:
+networks:
+  common_network:
+
+
