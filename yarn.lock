@@ -7,21 +7,21 @@
   resolved "https://registry.yarnpkg.com/@aashutoshrathi/word-wrap/-/word-wrap-1.2.6.tgz#bd9154aec9983f77b3a034ecaa015c2e4201f6cf"
   integrity sha512-1Yjs2SvM8TflER/OD3cOjhWWOZb58A2t7wpE2S9XfBYTiIl+XFhQG2bjy4Pu1I+EAlCNUzRDYDdFwFYUKvXcIA==
 
-"@alien-worlds/api-core@^0.0.155":
-  version "0.0.155"
-  resolved "https://npm.pkg.github.com/download/@alien-worlds/api-core/0.0.155/33c08092422d3b41d3a6b215c06931d7eabd85bd#33c08092422d3b41d3a6b215c06931d7eabd85bd"
-  integrity sha512-pF0L5KDXzcaaYGNheIrgLg+y+GzINOOHxvxA9jGLyt7MrBr/adV0P016B9EK+BN9W2JVo+BCwsjAleji64mDPQ==
+"@alien-worlds/api-core@^0.0.156":
+  version "0.0.156"
+  resolved "https://npm.pkg.github.com/download/@alien-worlds/api-core/0.0.156/16a4a27aadeaef27b4c0dbac0785aed05c834d68#16a4a27aadeaef27b4c0dbac0785aed05c834d68"
+  integrity sha512-n5aOkhuAqEemTUkBPj7qZneRKOlkhtb3W1ckVDHUMk4U5s1g2SPlrPExAxdb0k3JwtzlxCqxEssnXdmwqlRmEg==
   dependencies:
     inversify "^6.0.1"
     node-fetch "2.6.6"
     reflect-metadata "^0.1.13"
 
-"@alien-worlds/storage-mongodb@^0.0.24":
-  version "0.0.24"
-  resolved "https://npm.pkg.github.com/download/@alien-worlds/storage-mongodb/0.0.24/a995fd2bbe9d36c7c12042b2af273e2242a96dd5#a995fd2bbe9d36c7c12042b2af273e2242a96dd5"
-  integrity sha512-i4M04mdQCHyuPLu4QAAEhPxz6c6lcFKSCszSLswojJdq6vzQsRkP1MGEqJP3hRl97IcWdEsGswvvkn02UDdYEw==
+"@alien-worlds/storage-mongodb@^0.0.25":
+  version "0.0.25"
+  resolved "https://npm.pkg.github.com/download/@alien-worlds/storage-mongodb/0.0.25/263ddefa60c76cde938e8541fcc69cf4676af624#263ddefa60c76cde938e8541fcc69cf4676af624"
+  integrity sha512-4qvLr54PQflELr6JvRwzTVBdoURFj3/TUzKq/O3SWZWsEgmE5rMpd8QrcTubg9DftzujltyQ7Mc2Fj4Stld+Yw==
   dependencies:
-    "@alien-worlds/api-core" "^0.0.155"
+    "@alien-worlds/api-core" "^0.0.156"
     mongodb "4.9.1"
 
 "@ampproject/remapping@^2.2.0":
