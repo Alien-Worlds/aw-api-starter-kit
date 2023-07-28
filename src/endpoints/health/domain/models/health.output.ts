@@ -1,4 +1,4 @@
-import { Result } from '@alien-worlds/api-core';
+import { Result } from '@alien-worlds/aw-core';
 import { HealthJson } from '../../data/dtos/health.dto';
 
 export class HealthOutput {

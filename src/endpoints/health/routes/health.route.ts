@@ -1,4 +1,4 @@
-import { GetRoute, RouteHandler } from '@alien-worlds/api-core';
+import { GetRoute, RouteHandler } from '@alien-worlds/aw-core';
 import { HealthOutput } from '../domain/models/health.output';
 import { PSC_API_Config } from '../../../config';
 /*IMPORT*/

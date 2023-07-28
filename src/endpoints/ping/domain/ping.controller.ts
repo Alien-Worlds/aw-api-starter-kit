@@ -1,4 +1,4 @@
-import { Result, injectable } from '@alien-worlds/api-core';
+import { Result, injectable } from '@alien-worlds/aw-core';
 import { PingOutput } from './models/ping.output';
 /*IMPORT*/
 

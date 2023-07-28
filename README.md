@@ -6,9 +6,9 @@ This repository contains the basic structure for an API, along with all the nece
 
 The API Starter Kit relies on the following dependencies:
 
-- [@alien-worlds/api-core](https://github.com/Alien-Worlds/api-core): Core package providing common functionality for APIs.
+- [@alien-worlds/aw-core](https://github.com/Alien-Worlds/api-core): Core package providing common functionality for APIs.
 - [Express](https://expressjs.com/): Fast, unopinionated, minimalist web framework for Node.js.
-- [@alien-worlds/storage-mongodb](https://github.com/Alien-Worlds/storage-mongodb): MongoDB storage adapter for the API.
+- [@alien-worlds/aw-storage-mongodb](https://github.com/Alien-Worlds/storage-mongodb): MongoDB storage adapter for the API.
 
 Additionally, it integrates with [New Relic](https://newrelic.com/) for application performance monitoring.
 

@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { Container } from '@alien-worlds/api-core';
+import { Container } from '@alien-worlds/aw-core';
 import { PSC_API_Config } from '../config';
-import { MongoSource } from '@alien-worlds/storage-mongodb';
+import { MongoSource } from '@alien-worlds/aw-storage-mongodb';
 import { CheckHealthUseCase, HealthController } from './health';
 import { PingController } from './ping';
 

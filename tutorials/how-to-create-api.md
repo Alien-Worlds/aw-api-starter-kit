@@ -65,7 +65,7 @@ The root index is the entry point for the API. In this file, we establish the co
 ```typescript
 import 'reflect-metadata'; // this line is important! It is required for the ioc to run.
 
-import { Container } from '@alien-worlds/api-core';
+import { Container } from '@alien-worlds/aw-core';
 import { YourApi } from './api';
 import { setupDependencies } from './endpoints/Your';
 import { mountRoutes } from './routes';
@@ -93,7 +93,7 @@ startApi();
 api.ts serves as a wrapper for the chosen web framework (in our case it is Express). This file should contain initialization code and a crucial `framework` getter, used by `Routes` and other internal components.
 
 ```typescript
-import { log } from '@alien-worlds/api-core';
+import { log } from '@alien-worlds/aw-core';
 import bodyParser from 'body-parser';
 import express, { Express } from 'express';
 import { YourApiConfig } from './config/config.types';
@@ -124,7 +124,7 @@ export class YourApi {
 This file contains code for attaching routes to the web framework. Here, we create `Route` instances and assign a controller method to each route, ensuring the rest of the code remains web framework agnostic.
 
 ```typescript
-import { Container, Route } from '@alien-worlds/api-core';
+import { Container, Route } from '@alien-worlds/aw-core';
 import { YourEndpointApi } from './api';
 import {
 YourEndpointController,
@@ -151,7 +151,7 @@ The file structure includes routes, data, domain folders, etc. Let's start with 
 One endpoint, which we can refer to as a feature, can have multiple routes corresponding to that feature. Each route is a file that extends a Method route class like GetRoute, PostRoute, etc. Each route should contain a static method create and a private constructor to simplify its creation. Constructor arguments include the route path, handler, and route options.
 
 ```typescript
-import { GetRoute, RouteHandler } from '@alien-worlds/api-core';
+import { GetRoute, RouteHandler } from '@alien-worlds/aw-core';
 import { ListYourEndpointInput } from '../domain/models/list-your-endpoint.input';
 import { ListYourEndpointOutput } from '../domain/models/list-your-endpoint.output';
 
@@ -195,7 +195,7 @@ When you define your endpoint, you can mount it as shown in one of the above sni
 Endpoint controller holds methods for each route. It should be source-agnostic, as you might extend your API for different controller sources.
 
 ```typescript
-import { Result, injectable } from '@alien-worlds/api-core';
+import { Result, injectable } from '@alien-worlds/aw-core';
 import { ListYourEndpointOutput } from './models/list-your-endpoint.output';
 import { ListYourEndpointInput } from './models/list-your-endpoint.input';
 

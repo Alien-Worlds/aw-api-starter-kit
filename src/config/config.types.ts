@@ -1,4 +1,4 @@
-import { MongoConfig } from '@alien-worlds/storage-mongodb';
+import { MongoConfig } from '@alien-worlds/aw-storage-mongodb';
 
 export type Versions = {
   api: string;

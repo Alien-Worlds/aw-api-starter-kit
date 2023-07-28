@@ -1,5 +1,5 @@
-import { Failure, Result } from '@alien-worlds/api-core';
-import { MongoConfig, MongoSource } from '@alien-worlds/storage-mongodb';
+import { Failure, Result } from '@alien-worlds/aw-core';
+import { MongoConfig, MongoSource } from '@alien-worlds/aw-storage-mongodb';
 
 export class MongoHealthTest {
   public static async testConnection(config: MongoConfig): Promise<Result<boolean>> {

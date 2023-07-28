@@ -1,8 +1,8 @@
-import { ConfigVars } from '@alien-worlds/api-core';
+import { ConfigVars } from '@alien-worlds/aw-core';
 import { PSC_API_Config, NewRelicConfig } from './config.types';
 
 import { readFileSync } from 'fs';
-import { MongoConfig, buildMongoConfig } from '@alien-worlds/storage-mongodb';
+import { MongoConfig, buildMongoConfig } from '@alien-worlds/aw-storage-mongodb';
 
 export const buildConfig = (packageJsonPath: string): PSC_API_Config => {
   const vars = new ConfigVars();
@@ -22,8 +22,8 @@ export const buildConfig = (packageJsonPath: string): PSC_API_Config => {
   const versions = {
     api: packageJson.version,
     urlVersion: urlVersion,
-    apiCore: packageJson.dependencies['@alien-worlds/api-core'],
-    storageMongoDB: packageJson.dependencies['@alien-worlds/storage-mongodb'],
+    apiCore: packageJson.dependencies['@alien-worlds/aw-core'],
+    storageMongoDB: packageJson.dependencies['@alien-worlds/aw-storage-mongodb'],
     express: packageJson.dependencies['express'],
     newRelic: packageJson.dependencies['newrelic'],
   };

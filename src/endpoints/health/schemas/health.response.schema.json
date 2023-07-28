@@ -24,10 +24,10 @@
         "dependencies": {
             "type": "object",
             "properties": {
-                "@alien-worlds/api-core": {
+                "@alien-worlds/aw-core": {
                     "$ref": "#/$defs/semanticVerString"
                 },
-                "@alien-worlds/storage-mongodb": {
+                "@alien-worlds/aw-storage-mongodb": {
                     "$ref": "#/$defs/semanticVerString"
                 },
                 "newrelic": {
@@ -38,8 +38,8 @@
                 }
             },
             "required": [
-                "@alien-worlds/api-core",
-                "@alien-worlds/storage-mongodb",
+                "@alien-worlds/aw-core",
+                "@alien-worlds/aw-storage-mongodb",
                 "express",
                 "newrelic"
             ]

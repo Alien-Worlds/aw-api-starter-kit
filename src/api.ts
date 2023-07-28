@@ -1,4 +1,4 @@
-import { log } from '@alien-worlds/api-core';
+import { log } from '@alien-worlds/aw-core';
 import bodyParser from 'body-parser';
 import express, { Express } from 'express';
 import cors from 'cors';

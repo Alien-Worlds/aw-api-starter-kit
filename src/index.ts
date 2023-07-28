@@ -1,6 +1,6 @@
 import 'reflect-metadata';
 
-import { Container } from '@alien-worlds/api-core';
+import { Container } from '@alien-worlds/aw-core';
 import { PSC_API_ } from './api';
 import { setupDependencies } from './endpoints';
 import { mountRoutes } from './routes';

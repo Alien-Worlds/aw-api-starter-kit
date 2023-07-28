@@ -1,6 +1,6 @@
 import { PSC_API_Config } from './config/config.types';
 import { PSC_API_ } from './api';
-import { Container, Route } from '@alien-worlds/api-core';
+import { Container, Route } from '@alien-worlds/aw-core';
 import { PingController, HealthController } from './endpoints';
 import { GetHealthRoute } from './endpoints/health/routes/health.route';
 import { GetPingRoute } from './endpoints/ping/routes/ping.route';

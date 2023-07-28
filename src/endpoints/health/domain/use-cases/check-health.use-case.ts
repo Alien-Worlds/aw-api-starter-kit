@@ -1,4 +1,4 @@
-import { inject, injectable, Result, UseCase } from '@alien-worlds/api-core';
+import { inject, injectable, Result, UseCase } from '@alien-worlds/aw-core';
 
 import { HealthJson } from '../../data/dtos/health.dto';
 import { PSC_API_Config } from '../../../../config';
@@ -38,11 +38,11 @@ export class CheckHealthUseCase implements UseCase<HealthJson> {
 
       dependencies: [
         {
-          name: '@alien-worlds/api-core',
+          name: '@alien-worlds/aw-core',
           version: config.versions.apiCore,
         },
         {
-          name: '@alien-worlds/storage-mongodb',
+          name: '@alien-worlds/aw-storage-mongodb',
           version: config.versions.storageMongoDB,
         },
         {

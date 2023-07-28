@@ -1,4 +1,4 @@
-import { GetRoute, RouteHandler } from '@alien-worlds/api-core';
+import { GetRoute, RouteHandler } from '@alien-worlds/aw-core';
 import { PingOutput } from '../domain/models/ping.output';
 import { PSC_API_Config } from '../../../config';
 
