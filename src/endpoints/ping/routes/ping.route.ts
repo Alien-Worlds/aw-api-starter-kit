@@ -1,6 +1,6 @@
 import { GetRoute, RouteHandler } from '@alien-worlds/aw-core';
-import { PingOutput } from '../domain/models/ping.output';
 import { PSC_API_Config } from '../../../config';
+import { GetPingRouteIO } from './ping.route-io';
 
 export class GetPingRoute extends GetRoute {
   public static create(handler: RouteHandler, config: PSC_API_Config) {
@@ -8,10 +8,6 @@ export class GetPingRoute extends GetRoute {
   }
 
   private constructor(handler: RouteHandler, config: PSC_API_Config) {
-    super(`/${config.versions.urlVersion}/PMC_API_/ping`, handler, {
-      hooks: {
-        post: (output: PingOutput) => output.toResponse(),
-      },
-    });
+    super(`/${config.versions.urlVersion}/PMC_API_/ping`, handler, new GetPingRouteIO());
   }
 }

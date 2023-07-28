@@ -1,34 +1,21 @@
-import { Result } from '@alien-worlds/aw-core';
+import { IO, Result } from '@alien-worlds/aw-core';
 
-export class PingOutput {
+export class PingOutput implements IO {
   private constructor(public readonly result: Result<string>) {}
 
   public static create(result: Result<string>): PingOutput {
     return new PingOutput(result);
   }
 
-  public toResponse() {
+  public toJSON() {
     const { result } = this;
+
     if (result.isFailure) {
-      const {
-        failure: { error },
-      } = result;
-      if (error) {
-        return {
-          status: 500,
-          body: {
-            status: 'FAIL',
-            error: error.message,
-          },
-        };
-      }
+      return {};
     }
 
-    const { content } = result;
-
     return {
-      status: 200,
-      body: content,
+      ping: result.content,
     };
   }
 }

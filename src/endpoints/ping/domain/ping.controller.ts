@@ -1,6 +1,5 @@
 import { Result, injectable } from '@alien-worlds/aw-core';
 import { PingOutput } from './models/ping.output';
-/*IMPORT*/
 
 @injectable()
 export class PingController {
@@ -9,6 +8,4 @@ export class PingController {
   public async ping(): Promise<PingOutput> {
     return PingOutput.create(Result.withContent('pong'));
   }
-
-  /*METHOD*/
 }

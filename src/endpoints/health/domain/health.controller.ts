@@ -1,16 +1,12 @@
 import { inject, injectable } from '@alien-worlds/aw-core';
 import { HealthOutput } from './models/health.output';
 import { CheckHealthUseCase } from './use-cases/check-health.use-case';
-/*IMPORT*/
 
 @injectable()
 export class HealthController {
   public static Token = 'HEALTH_CONTROLLER';
 
-  /*INJECT*/
-
   constructor(
-    /*CONSTRUCTOR.INJECT*/
     @inject(CheckHealthUseCase.Token)
     private checkHealthUseCase: CheckHealthUseCase
   ) {}
@@ -19,6 +15,4 @@ export class HealthController {
     const result = await this.checkHealthUseCase.execute();
     return HealthOutput.create(result);
   }
-
-  /*METHOD*/
 }

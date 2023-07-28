@@ -1,7 +1,6 @@
 import { GetRoute, RouteHandler } from '@alien-worlds/aw-core';
-import { HealthOutput } from '../domain/models/health.output';
 import { PSC_API_Config } from '../../../config';
-/*IMPORT*/
+import { GetHealthRouteIO } from './health.route-io';
 
 export class GetHealthRoute extends GetRoute {
   public static create(handler: RouteHandler, config: PSC_API_Config) {
@@ -9,10 +8,10 @@ export class GetHealthRoute extends GetRoute {
   }
 
   private constructor(handler: RouteHandler, config: PSC_API_Config) {
-    super(`/${config.versions.urlVersion}/PMC_API_/health`, handler, {
-      hooks: {
-        post: (output: HealthOutput) => output.toResponse(),
-      },
-    });
+    super(
+      `/${config.versions.urlVersion}/PMC_API_/health`,
+      handler,
+      new GetHealthRouteIO()
+    );
   }
 }

@@ -1,14 +1,14 @@
-import { Result } from '@alien-worlds/aw-core';
+import { IO, Result } from '@alien-worlds/aw-core';
 import { HealthJson } from '../../data/dtos/health.dto';
 
-export class HealthOutput {
+export class HealthOutput implements IO {
   public static create(result: Result<HealthJson>): HealthOutput {
     return new HealthOutput(result);
   }
 
   constructor(public readonly result: Result<HealthJson>) {}
 
-  public toResponse() {
+  public toJSON() {
     const { result } = this;
     if (result.isFailure) {
       const {
@@ -39,7 +39,7 @@ export class HealthOutput {
       return out;
     }, {});
 
-    const body = {
+    return {
       status,
       version,
       timestamp: timestamp.getTime(),
@@ -47,11 +47,6 @@ export class HealthOutput {
       nodeVersion,
       dependencies: dependenciesOutput,
       databases,
-    };
-
-    return {
-      status: 200,
-      body,
     };
   }
 }
