@@ -1,4 +1,4 @@
-import { Failure, Result } from '@alien-worlds/aw-core';
+import { Result, log } from '@alien-worlds/aw-core';
 import { MongoConfig, MongoSource } from '@alien-worlds/aw-storage-mongodb';
 
 export class MongoHealthTest {
@@ -8,7 +8,8 @@ export class MongoHealthTest {
       mongo.client.close();
       return Result.withContent(true);
     } catch (error) {
-      return Result.withFailure(Failure.fromError(error));
+      log(error)
+      return Result.withContent(false);
     }
   }
 }

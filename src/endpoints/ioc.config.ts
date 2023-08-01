@@ -1,19 +1,17 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { Container } from '@alien-worlds/aw-core';
-import { PSC_API_Config } from '../config';
-import { MongoSource } from '@alien-worlds/aw-storage-mongodb';
-import { CheckHealthUseCase, HealthController } from './health';
-import { PingController } from './ping';
+import { DependencyInjector } from '@alien-worlds/aw-core';
+import { PingDependencyInjector } from './ping/ping.ioc';
+import { HealthDependencyInjector } from './health/health.ioc';
+import PSC_API_Config from '../config/api-config';
 
-export const setupDependencies = async (config: PSC_API_Config, container: Container) => {
-  const mongoSource = await MongoSource.create(config.mongo);
+export class ApiDependencyInjector extends DependencyInjector {
+  public async setup(config: PSC_API_Config): Promise<void> {
+    const { container } = this;
 
-  container.bind<PSC_API_Config>('CONFIG').toConstantValue(config);
+    const healthDI = new HealthDependencyInjector(container);
+    const pingDI = new PingDependencyInjector(container);
 
-  // health
-  container.bind<CheckHealthUseCase>(CheckHealthUseCase.Token).to(CheckHealthUseCase);
-  container.bind<HealthController>(HealthController.Token).to(HealthController);
-
-  // ping
-  container.bind<PingController>(PingController.Token).to(PingController);
-};
+    healthDI.setup(config);
+    pingDI.setup();
+  }
+}

@@ -1,19 +1,17 @@
-import { PSC_API_Config } from './config/config.types';
+import PSC_API_Config from './config/api-config';
 import { PSC_API_ } from './api';
 import { Container, Route } from '@alien-worlds/aw-core';
 import { PingController, HealthController } from './endpoints';
-import { GetHealthRoute } from './endpoints/health/routes/health.route';
+import { HealthCheckRoute } from './endpoints/health/routes/health-check.route';
 import { GetPingRoute } from './endpoints/ping/routes/ping.route';
 /*IMPORT*/
 
-export const mountRoutes = (api: PSC_API_, container: Container) => {
-  const config = container.get<PSC_API_Config>('CONFIG');
-
+export const mountRoutes = (api: PSC_API_, container: Container, config: PSC_API_Config) => {
   // Health
   const healthController = container.get<HealthController>(HealthController.Token);
   Route.mount(
     api.framework,
-    GetHealthRoute.create(healthController.health.bind(healthController), config)
+    HealthCheckRoute.create(healthController.healthCheck.bind(healthController), config)
   );
 
   // Ping

@@ -4,7 +4,7 @@ import express, { Express } from 'express';
 import cors from 'cors';
 import YAML from 'yaml';
 import swaggerUi from 'swagger-ui-express';
-import { PSC_API_Config } from './config/config.types';
+import PSC_API_Config from './config/api-config';
 import { readFileSync } from 'fs';
 import { join } from 'path';
 
@@ -23,7 +23,7 @@ export class PSC_API_ {
     const file = readFileSync(join(__dirname, '../docs/PMC_API_-oas.yaml'), 'utf8');
     const swaggerDocument = YAML.parse(file);
     this.app.use(
-      `/${config.versions.urlVersion}/PMC_API_/docs`,
+      `/${config.urlVersion}/PMC_API_/docs`,
       swaggerUi.serve,
       swaggerUi.setup(swaggerDocument)
     );

@@ -1,7 +1,7 @@
-import { Response, DefaultRouteIO } from '@alien-worlds/aw-core';
+import { Response, RouteIO } from '@alien-worlds/aw-core';
 import { PingOutput } from '../domain/models/ping.output';
 
-export class GetPingRouteIO extends DefaultRouteIO {
+export class GetPingRouteIO implements RouteIO {
   public toResponse(output: PingOutput): Response {
     const { result } = output;
     if (result.isFailure) {

@@ -2,19 +2,17 @@ import 'reflect-metadata';
 
 import { Container } from '@alien-worlds/aw-core';
 import { PSC_API_ } from './api';
-import { setupDependencies } from './endpoints';
+import { config } from './config';
 import { mountRoutes } from './routes';
-import { buildConfig } from './config';
-import { join } from 'path';
+import { ApiDependencyInjector } from './endpoints';
 
 export const start = async () => {
-  const config = buildConfig(join(__dirname, '../package.json'));
-  const container = new Container();
-
-  await setupDependencies(config, container);
+  const ioc = new Container();
+  const apiDependencyInjector = new ApiDependencyInjector(ioc);
+  apiDependencyInjector.setup(config);
 
   const api = new PSC_API_(config);
-  mountRoutes(api, container);
+  mountRoutes(api, ioc, config);
   api.start();
 };
 
