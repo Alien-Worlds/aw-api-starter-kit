@@ -1,8 +1,12 @@
 {
-  "name": "@alien-worlds/api-starter-kit",
+  "name": "@alien-worlds/aw-api-starter-kit",
   "version": "0.0.1",
   "description": "",
   "packageManager": "yarn@3.2.3",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Alien-Worlds/aw-api-starter-kit.git"
+  },
   "main": "build/index.js",
   "types": "build/index.d.ts",
   "files": [
