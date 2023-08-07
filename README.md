@@ -52,9 +52,9 @@ For more details on how to write your API using this starter kit, please refer t
 
 ## Helpful links:
 
-- [How to create an API? (using starter kit)](./tutorials/how-to-write-api.md)
-- [API Core tutorials](https://github.com/Alien-Worlds/api-core/tree/main/tutorials)
-- [History Tools Starter Kit tutorials](https://github.com/Alien-Worlds/history-tools-starter-kit/tree/main/tutorials)
+- [How to create an API? (using starter kit)](https://github.com/Alien-Worlds/aw-api-starter-kit/blob/main/tutorials/how-to-create-api.md)
+- [API Core tutorials](https://github.com/Alien-Worlds/aw-core/tree/main/tutorials)
+- [History Tools Starter Kit tutorials](https://github.com/Alien-Worlds/aw-history-starter-kit/tree/main/tutorials)
 
 ## Contributing
 
