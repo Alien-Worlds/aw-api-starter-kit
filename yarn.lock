@@ -7,21 +7,21 @@
   resolved "https://registry.yarnpkg.com/@aashutoshrathi/word-wrap/-/word-wrap-1.2.6.tgz#bd9154aec9983f77b3a034ecaa015c2e4201f6cf"
   integrity sha512-1Yjs2SvM8TflER/OD3cOjhWWOZb58A2t7wpE2S9XfBYTiIl+XFhQG2bjy4Pu1I+EAlCNUzRDYDdFwFYUKvXcIA==
 
-"@alien-worlds/aw-core@^0.0.6":
-  version "0.0.6"
-  resolved "https://npm.pkg.github.com/download/@alien-worlds/aw-core/0.0.6/fdacb74371b9b80f311ff293e0ad4c5f8e105db5#fdacb74371b9b80f311ff293e0ad4c5f8e105db5"
-  integrity sha512-vrYMF1pA4LJqOvv3DaZ12WtmUdUkxrxjrmT+Zq5czu5N2VWw/XcrAygThCdBfGBwFS7WZBF93r46uf1BXGFC8w==
+"@alien-worlds/aw-core@^0.0.15":
+  version "0.0.15"
+  resolved "https://registry.yarnpkg.com/@alien-worlds/aw-core/-/aw-core-0.0.15.tgz#1dca120a8b17577be4f71b0cc83850893ba9caa4"
+  integrity sha512-8Q9gvAZTIBYdBvZJvEvK9D6gKzOhITkgS8Vlc6x4BrFNeLVTs8JJaV4S7ALbaKu5jy1udai1ehhJ5FZEn2OYpw==
   dependencies:
     inversify "^6.0.1"
     node-fetch "2.6.6"
     reflect-metadata "^0.1.13"
 
-"@alien-worlds/aw-storage-mongodb@^0.0.6":
-  version "0.0.6"
-  resolved "https://npm.pkg.github.com/download/@alien-worlds/aw-storage-mongodb/0.0.6/cf27bcb634db2f4f8c2e8d65b1c42093704d1e8a#cf27bcb634db2f4f8c2e8d65b1c42093704d1e8a"
-  integrity sha512-SxF7q4hllK8JOxreeXHjO71kjZSHbAZ484dt8SLwr/jG9NVpLI95VyjnAEeoTsl2K0QiXNLPTcxEFjp/OBOELw==
+"@alien-worlds/aw-storage-mongodb@^0.0.10":
+  version "0.0.10"
+  resolved "https://registry.yarnpkg.com/@alien-worlds/aw-storage-mongodb/-/aw-storage-mongodb-0.0.10.tgz#9e923b768206aa24050fe93f18a4229654dc455e"
+  integrity sha512-BVTOGH4nUhzKzdnk6PeI4wQR2uZgHwUrUUySK8rAaq5DKUcip67lHJaI0rK7xIAujKPPxOKvo68cIXF6/0Z0jA==
   dependencies:
-    "@alien-worlds/aw-core" "^0.0.6"
+    "@alien-worlds/aw-core" "^0.0.15"
     mongodb "4.9.1"
 
 "@ampproject/remapping@^2.2.0":
