@@ -48,7 +48,7 @@ Additionally, it integrates with [New Relic](https://newrelic.com/) for applicat
 - **Method:** GET
 - **Description:** A quick endpoint to check if the API is responding. It can be used for basic connectivity testing.
 
-For more details on how to write your API using this starter kit, please refer to the [How to Write API](./tutorials/how-to-write-api.md) guide.
+For more details on how to write your API using this starter kit, please refer to the [How to create API](https://github.com/Alien-Worlds/aw-api-starter-kit/blob/main/tutorials/how-to-create-api.md) guide.
 
 ## Helpful links:
 
