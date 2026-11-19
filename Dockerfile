@@ -1,6 +1,6 @@
 # BUILDER
 
-FROM node:17-alpine3.15 AS api-builder
+FROM node:24-alpine AS api-builder
 
 ARG GITHUB_TOKEN
 
@@ -20,7 +20,7 @@ RUN yarn build
 
 # PRODUCTION
 
-FROM node:17-alpine3.15 AS api
+FROM node:24-alpine AS api
 
 WORKDIR /var/www/api
 
